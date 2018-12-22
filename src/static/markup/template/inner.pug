@@ -1,0 +1,29 @@
+include ../components/_base/index
+
+<!DOCTYPE html>
+html(lang="ru-RU")
+    head
+        block page-title
+        include ../components/_base/meta-head
+    body
+        +b.page
+            +e.header
+                include ../components/header
+
+            +e.inner
+                +b.inner
+                    +e.wrapper.wrapper
+                        +e.left
+                            block inner-left
+                        +e.right
+                            block inner-right
+
+            +e.footer
+                include ../components/footer
+        +b.humburger.js-mobile-panel-open
+            +e.item
+            +e.item
+            +e.item
+        include ../components/mobile-panel
+
+        include ../components/_base/scripts

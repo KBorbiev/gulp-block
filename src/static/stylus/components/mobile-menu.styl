@@ -1,0 +1,71 @@
+.mobile-menu
+    border_color = #333
+    bg_color = #444
+    bg_hover_color = #555
+    font_color = #fff
+
+    noselect()
+    font-size 18px
+
+    li
+        display block
+        border 1px solid border_color
+        margin-bottom -1px
+        border-right none
+        border-left none
+    a
+        display block
+        padding 10px 15px
+        text-decoration none
+        background-color bg_color
+        color font_color
+        &:hover
+            background-color bg_hover_color
+    &__level
+        position relative
+    &__left
+        position absolute
+        top 0
+        left 0
+        width 48px
+        height 100%
+        border-right 1px solid border_color
+    &__right
+        margin-left 48px
+    &__arrow
+        position relative
+        cursor pointer
+        height 100%
+        background-color bg_color
+        &:hover
+            background-color bg_hover_color
+        &:before
+            content ''
+            display block
+            position absolute
+            top 0
+            left 0
+            bottom 0
+            right 0
+            z-index 120
+            margin auto
+            width 0
+            height 0
+            border-style solid
+            border-width 7px 0 7px 10px
+            border-color transparent transparent transparent #fff
+            transition transform $timing
+        &.is-active
+            &:before
+                transform rotate(90deg)
+    li > ul
+        overflow hidden
+        display none
+        padding-left 10px
+        background-color border_color
+        font-size 0.9em
+
+    // Ограничение бокового отступа глубже 4-го уровня вложенности
+    li > ul > li > ul > li > ul > li > ul
+        padding-left 0
+        font-size 1em

@@ -1,0 +1,78 @@
+// Кнопка откр
+.humburger
+    position fixed
+    top 15px
+    right 15px
+    width 45px
+    z-index 100
+    cursor pointer
+    &__item
+        width 100%
+        height 6px
+        margin-bottom 4px
+        background-color #999
+        &:last-child
+            margin-bottom 0
+
+.mobile-overlay
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index 100
+    background-color rgba(0, 0, 0, 0.3)
+    display none
+    opacity 0
+    transition opacity $timing
+    &.is-visible
+        opacity 1
+
+.mobile-panel
+    // Переменная ширины из '_variables'
+    $panel-width = $mobile
+
+    position fixed
+    top 0
+    right - $panel-width
+    z-index 105
+    width 100%
+    max-width $panel-width
+    height 100%
+    background-color #444
+    color #fff
+    transition transform $timing
+    overflow-x hidden
+    &.is-opened
+        transform translateX(- $panel-width)
+    &__close
+        position relative
+        width 45px
+        height 45px
+        float right
+        cursor pointer
+        font-size 0
+        &::before
+        &::after
+            content ''
+            display block
+            position absolute
+            top 0
+            left 0
+            right 0
+            bottom 0
+            margin auto
+            z-index 5
+            width 75%
+            height 2px
+            border-bottom 1px solid #fff
+        &::before
+            transform rotate(45deg)
+        &::after
+            transform rotate(-45deg)
+    &__top
+        clearfix()
+        padding 5px 0 5px 10px
+    &__logo
+        float left
+        width 45px

@@ -1,0 +1,265 @@
+// ====== Базовые подключения
+@import 'components/_base/_variables'
+@import 'components/_base/_mixins'
+
+
+// Хэлперы и шрифты в конце
+
+
+// ====== Сброс элементов
+html
+body
+    margin 0
+    height 100%
+
+*
+*::before
+*::after
+    box-sizing border-box
+    outline none
+
+a
+    background-color transparent
+
+img
+    noselect()
+    display inline-block
+    vertical-align top
+    max-width 100%
+    border none
+
+article
+aside
+footer
+header
+nav
+section
+figcaption
+figure
+main
+details
+menu
+    display block
+
+
+// ===== Сброс типографии для семантической вёрстки
+h1
+h2
+h3
+h4
+h5
+h6
+    margin 0
+    font-size inherit
+    font-weight inherit
+
+p
+    margin 0
+
+b
+strong
+    font-weight bold
+
+small
+    font-size 80%
+
+sub
+sup
+    font-size 75%
+    line-height 0
+    position relative
+    vertical-align baseline
+
+sub
+    bottom -0.25em
+
+sup
+    top -0.5em
+
+ul
+ol
+    margin 0
+    padding 0
+
+li
+    list-style none
+
+table
+    margin 0
+    width 100%
+    border-collapse collapse
+
+th
+td
+    padding 0
+    vertical-align top
+
+th
+    text-align left
+    font-weight normal
+
+figure
+    margin 0
+
+address
+    font-style normal
+
+
+// ====== Сброс форм
+fieldset
+    margin 0
+    padding 0
+    border 1px solid #000
+    padding 0.5em 1em
+
+legend
+    padding 0 0.25em
+    margin 0
+
+select
+    margin 0
+    padding 0.5em
+    display block
+    font-family inherit
+    font-size inherit
+    width 100%
+    background none
+    color inherit
+    border 1px solid #000
+    box-shadow none
+    cursor pointer
+
+select[multiple]
+    height auto
+
+option
+    padding 0.5em
+    font-family inherit
+    font-size inherit
+
+
+// ====== Поля
++fields()
+    margin 0
+    padding 0.5em 0.75em
+    display block
+    width 100%
+    background none
+    background-color #fff
+    border 1px solid #000
+    box-shadow none
+    font-family inherit
+    font-size inherit
+    line-height inherit
+    letter-spacing inherit
+    color #000
+
+    +placeholder()
+        opacity 1
+        letter-spacing inherit
+        color #000
+
+textarea
+    height 8em
+    resize none
+
+input[type="checkbox"]
+input[type="radio"]
+    margin 0
+    display inline-block
+    vertical-align top
+
+label input[type="checkbox"]
+label input[type="radio"]
+    margin-top -0.33em
+    margin-right 0.5em
+
+input[type="file"]
+    margin 0
+    padding 0.5em
+    width 100%
+    display block
+    font-family inherit
+    font-size inherit
+    letter-spacing inherit
+    box-shadow none
+    background none
+    border 1px solid #000
+    cursor pointer
+
+
+// ====== Диапазон
+input[type="range"]
+input[type="range"]:focus
+    padding 0
+    margin 0
+    height 16px
+    position relative
+    width 100%
+    cursor pointer
+    box-shadow none
+    -webkit-appearance none
+    background-color transparent
+    outline none
+
+input[type="range"]::-moz-range-thumb
+    box-shadow none
+    width 12px
+    height 12px
+    border-radius 0
+    background-color #fff
+    border 1px solid #444
+    border-radius 50%
+
+input[type="range"]::-moz-range-track
+    height 4px
+    background-color #ccc
+
+input[type="range"]::-moz-range-progress
+    height 4px
+    background-color #444
+
+input[type="range"]::-webkit-slider-thumb
+    width 12px
+    height 12px
+    margin-top -4px
+    cursor pointer
+    border none
+    border-radius 50%
+    background-color #fff
+    border 1px solid #000
+    -webkit-appearance none
+
+input[type="range"]::-webkit-slider-runnable-track
+    height 4px
+    background-color #ccc
+
+input[type="range"]::-ms-thumb
+    width 12px
+    height 12px
+    cursor pointer
+    border 1px solid #000
+    border-radius 55px
+    background-color #fff
+    border-radius 50%
+
+input[type="range"]::-ms-track
+    height 4px
+    color transparent
+    border none
+    background transparent
+    background-color #ccc
+    box-shadow none
+
+input[type="range"]::-ms-fill-lower
+    height 4px
+    background-color #444
+
+input[type="range"]::-ms-fill-upper
+    height 4px
+    background-color #ccc
+
+
+// ====== Хелперы и шрифты
+@import 'components/_base/helpers'
+@import 'components/_base/fonts'

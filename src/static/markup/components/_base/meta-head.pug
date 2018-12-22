@@ -1,0 +1,37 @@
+//- Основные свойства для кодировки, поисковиков и кэша
+meta(charset="utf-8")
+meta(name="robots" content="noodp,noydir")
+meta(http-equiv="Cache-Control" content="no-cache")
+
+//- Базовые SEO теги
+meta(name="description" content="Описание")
+meta(name="keywords" content="Ключевые слова")
+meta(property="og:title" content="Заголовок страницы")
+meta(property="og:description" content="Описание")
+meta(property="og:type" content="website")
+meta(property="og:site_name" content="Название сайта")
+meta(property="og:url" content="URL сайта")
+
+//- Open Graph - изображение (по умолчанию используем лого сайта)
+meta(property="og:image" content="img/og-logo.png")
+meta(property="og:image:type" content="image/png")
+meta(property="og:image:width" content="180")
+meta(property="og:image:height" content="180")
+
+//- Основа для кроссбраузерности и телефонов
+meta(http-equiv="x-ua-compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no")
+meta(name="format-detection" content="telephone=no")
+
+//- Фавиконки всего две и лежат в отдельной папке
+link(rel="shortcut icon" href="favicons/favicon.png")
+link(rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png")
+
+//- Плагин Modernizr с некоторыми JS полифиллами
+script(src="js/polyfills.min.js")
+
+//- Стили
+link(rel="stylesheet" href="css/reset.min.css")
+link(rel="stylesheet" href="css/plugins.min.css")
+link(rel="stylesheet" href="css/main.min.css")
+link(rel="stylesheet" href="css/content.min.css")
